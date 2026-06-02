@@ -60,7 +60,8 @@ Tony Stark's J.A.R.V.I.S. Address me as "My Emperor."
 
 ## Стек
 - HTML5 (семантическая вёрстка)
-- CSS3 (чистый CSS, без препроцессоров; Flexbox, Grid basics)
+- SASS(SCSS)
+- CSS3 (Flexbox, Grid basics)
 - Vanilla JavaScript (ES6+, без фреймворков)
 
 ## Адаптивность
@@ -68,14 +69,24 @@ Tony Stark's J.A.R.V.I.S. Address me as "My Emperor."
 
 ## Структура файлов
 ```
-/project
+project/
 ├── index.html
-├── /css
+├── css/
 │   ├── reset.css
 │   └── style.css
-└── /assets
-    ├── /fonts
-    └── /images
+├── assets/
+│   ├── /fonts
+│   └── /images
+└──scss/
+    ├── abstracts/
+    │   ├── _variables.scss   ← цвета, шрифты, отступы, breakpoints
+    │   └── _mixins.scss      ← миксин respond() для медиа-запросов
+    ├── base/
+    │   └── _global.scss      ← стили body, фон страницы, центрирование
+    ├── components/
+    │   ├── _card.scss        ← стили карточки
+    │   └── _button.scss      ← стили кнопки
+    └── main.scss             ← единственная «точка сборки»
 ```
 
 ## Style guide
@@ -126,6 +137,12 @@ Tony Stark's J.A.R.V.I.S. Address me as "My Emperor."
 - Все интерактивные элементы доступны с клавиатуры.
 - Кнопки — это `<button>`, ссылки — это `<a>`. Не наоборот.
 - Достаточный контраст текста и фона.
+
+## Использование SASS(SCSS)
+1. `npm init -y`
+2. `npm install -D sass`
+3. Открыть package.json и в разделе "scripts" дописать.
+
 
 ## Дополнительная информация относительно данного проекта:
 ## 1. Role Definition

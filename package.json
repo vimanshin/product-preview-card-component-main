@@ -1,0 +1,26 @@
+{
+  "name": "product-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "Это моё решение задачи [«Product preview card component» на Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Задачи Frontend Mentor помогают прокачивать навыки вёрстки на реальных проектах.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch scss/main.scss:css/style.css",
+    "sass:build": "sass scss/main.scss css/style.css --style=compressed --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vimanshin/product-preview-card-component-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vimanshin/product-preview-card-component-main/issues"
+  },
+  "homepage": "https://github.com/vimanshin/product-preview-card-component-main#readme",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  }
+}

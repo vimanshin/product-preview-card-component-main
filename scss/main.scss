@@ -1,0 +1,19 @@
+// Сначала абстракции: переменные и миксины
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// Затем базовые стили страницы
+@use "base/fonts";
+@use "base/global";
+
+// И компоненты
+@use "components/card";
+@use "components/button";
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

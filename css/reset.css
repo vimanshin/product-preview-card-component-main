@@ -1,40 +1,92 @@
+/* Box sizing rules — коробочная модель border-box для всего (то, что обсуждали) */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
-body {
-  width: 1100px;
-  margin: 0 auto;
-  font-family: Raleway, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/* Запрет авто-инфляции размера шрифта на мобильных */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
+/* Убираем margin по умолчанию — управлять отступами будем сами */
+body,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p,
-ul,
-ol,
-li,
-blockquote {
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
+  margin-block-end: 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
+/* Списки с role="list" — без маркеров */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-img {
-  width: 100%;
+/* Базовые настройки body */
+body {
+  min-height: 100vh; /* тело занимает минимум всю высоту экрана */
+  line-height: 1.5; /* комфортный межстрочный интервал для текста */
 }
 
-button {
+/* У заголовков и интерактива межстрочный поменьше */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Красивый перенос строк в заголовках */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Ссылки без класса — наследуют цвет, аккуратное подчёркивание */
+a:not([class]) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+
+/* Картинки удобнее в работе: блочные и не вылезают за контейнер */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Поля ввода и кнопки наследуют шрифт страницы */
+input,
+button,
+textarea,
+select {
   font: inherit;
+}
+
+/* textarea без атрибута rows не будет крошечной */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Якорные цели получают отступ при скролле */
+:target {
+  scroll-margin-block: 5rem;
 }
