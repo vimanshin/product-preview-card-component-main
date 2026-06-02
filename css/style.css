@@ -1,33 +1,32 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Fraunces";
-  src: url("../assets/fonts/Fraunces_72pt-Bold.woff2") format("woff2");
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/Fraunces_72pt-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 body {
   color: hsl(228, 12%, 48%);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.6;
   background-color: hsl(30, 38%, 92%);
 }
-
 .page {
   display: flex;
   justify-content: center;
@@ -35,7 +34,6 @@ body {
   min-height: 100vh;
   padding: 5rem 0.75rem 0;
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -43,7 +41,7 @@ body {
   max-width: 350px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: hsl(0, 0%, 100%);
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .card {
@@ -74,13 +72,12 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 .card__content {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 32px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .card__content {
@@ -90,7 +87,6 @@ body {
     border-bottom-right-radius: 8px;
   }
 }
-
 .card__category {
   color: hsl(228, 12%, 48%);
   font-size: 0.75rem;
@@ -98,46 +94,40 @@ body {
   letter-spacing: 0.3125rem;
   text-transform: uppercase;
 }
-
 .card__title {
   color: hsl(212, 21%, 14%);
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1;
   letter-spacing: 0.07rem;
 }
-
 .card__description {
   margin-bottom: 7px;
   color: hsl(228, 12%, 48%);
   font-size: 0.875rem;
   line-height: 1.6;
 }
-
 .card__price {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 8px;
 }
-
 .card__price-current {
   color: hsl(158, 36%, 37%);
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1;
   letter-spacing: 0.06rem;
 }
-
 .card__price-old {
   color: hsl(228, 12%, 48%);
   font-size: 0.8125rem;
   line-height: 1.2;
   text-decoration: line-through;
 }
-
 .card__button {
   display: inline-flex;
   justify-content: center;
@@ -147,7 +137,7 @@ body {
   border: none;
   border-radius: 8px;
   padding: 16px 32px;
-  color: hsl(0, 0%, 100%);
+  color: #fff;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.1;
@@ -169,14 +159,10 @@ body {
   outline: 2px solid hsl(158, 42%, 18%);
   outline-offset: 3px;
 }
-
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-/*# sourceMappingURL=style.css.map */
