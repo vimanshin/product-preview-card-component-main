@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+// Миксин: медиа-запрос min-width (mobile-first)
+// Принимает: минимальная ширина viewport (например $bp-tablet)
+@mixin respond($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}

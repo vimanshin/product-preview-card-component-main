@@ -1,0 +1,25 @@
+// Дизайн-токены: цвета, шрифты, отступы, breakpoints
+// Значения из style-guide.md и Figma
+
+// --- Цвета ---
+$color-green-500: hsl(158, 36%, 37%);
+$color-green-700: hsl(158, 42%, 18%);
+$color-black: hsl(212, 21%, 14%);
+$color-grey: hsl(228, 12%, 48%);
+$color-cream: hsl(30, 38%, 92%);
+$color-white: hsl(0, 0%, 100%);
+
+// --- Шрифты ---
+$font-body: "Montserrat", sans-serif;
+$font-heading: "Fraunces", serif;
+
+// --- Размеры и отступы ---
+$radius-card: 8px;
+$spacing-100: 8px;
+$spacing-200: 16px;
+$spacing-300: 24px;
+$spacing-400: 32px;
+
+// --- Breakpoints (mobile-first) ---
+$bp-tablet: 768px;
+$bp-desktop: 1440px;
