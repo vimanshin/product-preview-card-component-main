@@ -23,38 +23,31 @@
 
 ### Скриншот
 
-![](./screenshot.jpg)
+![](./design/Desktop-new.jpg)
 
 ### Ссылки
 
-- URL живого сайта: [Добавь ссылку на живой сайт](https://your-live-site-url.com)
+- URL живого сайта: [Ссылка на живой сайт](https://vimanshin.github.io/product-preview-card-component-main/)
 
 ## Процесс работы
 
 ### Стек технологий
 
-- Семантическая разметка HTML5
-- Кастомные свойства CSS
-- Flexbox
-- CSS Grid
-- Mobile-first подход
+- Семантическая разметка HTML5 (`main`, `article`, `picture`, `button`)
+- SCSS (Sass) — модульная структура 7-1, `@use`, partials
+- CSS3 — Flexbox, mobile-first медиа-запросы
+- Локальные шрифты через `@font-face` (woff2)
+- Адаптивные изображения — `<picture>` + `srcset`
+- Сборка стилей — npm + Dart Sass (`sass:watch` / `sass:build`)
+- Доступность (a11y) — `alt`, `aria-hidden`, `:focus-visible`, `@media (hover: hover)`
+- Методология имён — BEM (`.card`, `.card__title`, …)
 
 ### Чему я научился
 
-В этом разделе можно подвести итог основным урокам, которые ты извлёк в ходе работы над проектом. Записать их и привести примеры кода — отличный способ закрепить знания.
-
-Пример добавления фрагментов кода:
-
-```html
-<h1>Какой-то HTML-код, которым я горжусь</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- **Организовывать стили через SCSS** — разнести код по папкам (`abstracts`, `base`, `components`) и собирать всё в одном `main.scss`, чтобы проект было проще поддерживать.
+- **Работать mobile-first** — сначала вёрстка под узкий экран, затем расширение через `@include respond($bp-tablet)` без переписывания всей вёрстки.
+- **Собирать адаптивную карточку на Flexbox** — колонка на mobile и ряд на tablet+, плюс `flex-shrink: 0` для блока с фото, чтобы картинка не «сплющивалась».
+- **Подключать разные изображения под ширину экрана** — через `<picture>` и `srcset`, чтобы на телефоне грузился более лёгкий mobile-кадр.
+- **Подключать шрифты локально** — `@font-face`, `font-display: swap` и пути относительно скомпилированного `css/style.css`.
+- **Делать интерактив доступным** — кнопка как `<button>`, видимый `:focus-visible` для клавиатуры, hover только для устройств с мышью (`@media (hover: hover)`).
+- **Настроить рабочий процесс в Cursor** — `npm run sass:watch` во время разработки и `npm run sass:build` перед публикацией на GitHub Pages.
