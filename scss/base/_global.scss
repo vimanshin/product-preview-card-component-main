@@ -1,4 +1,19 @@
 @use "../abstracts/variables" as *;
 
 // Глобальные стили страницы: body, фон, центрирование карточки
-// Заполнишь на Этапе 2 плана
+body {
+  color: $color-grey;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background-color: $color-cream;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5rem 0.75rem 0;
+}

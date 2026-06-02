@@ -2,4 +2,108 @@
 @use "../abstracts/mixins" as *;
 
 // Стили карточки товара (.card, .card__media, .card__content, …)
-// Заполнишь на Этапах 3–6 плана
+
+// --- Карточка (mobile-first) ---
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  border-radius: $radius-card;
+  overflow: hidden;
+  background-color: $color-white;
+
+  @include respond($bp-tablet) {
+    flex-direction: row;
+    max-width: 600px;
+  }
+
+  &__media {
+    height: 342px;
+    overflow: hidden;
+
+    @include respond($bp-tablet) {
+      flex-shrink: 0;
+      width: 300px;
+      height: 456px;
+      border-radius: $radius-card 0 0 $radius-card;
+    }
+
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// --- Контент ---
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-300;
+  padding: $spacing-400;
+  background-color: $color-white;
+
+  @include respond($bp-tablet) {
+    flex: 1;
+    min-height: 456px;
+    border-top-right-radius: $radius-card;
+    border-bottom-right-radius: $radius-card;
+  }
+}
+
+// --- Типографика ---
+.card__category {
+  color: $color-grey;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.card__title {
+  color: $color-black;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 2rem; // 32px
+  line-height: 1;
+  letter-spacing: 0.07rem;
+}
+
+.card__description {
+  margin-bottom: 7px;
+  color: $color-grey;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+// --- Цена ---
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: $spacing-200;
+  margin-bottom: 8px;
+}
+
+.card__price-current {
+  color: $color-green-500;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.06rem;
+}
+.card__price-old {
+  color: $color-grey;
+  font-size: 0.8125rem; // 13px
+  line-height: 1.2;
+  text-decoration: line-through;
+}
